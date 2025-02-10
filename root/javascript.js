@@ -93,10 +93,10 @@ function question1() {
     a1.remove();
     a2.remove();
     countdown();
-    question.textContent = "Where was our first date?";
+    question.textContent = "How did we first meet?";
         
     a1 = document.createElement("BUTTON");
-    a1.innerHTML = "Shopping";
+    a1.innerHTML = "You fell out of heaven right before me";
     document.body.children[4].appendChild(a1);
     a1.addEventListener("click", function () {
         wrongcw();
@@ -105,7 +105,7 @@ function question1() {
     });
 
     a2 = document.createElement("BUTTON");
-    a2.innerHTML = "My bed";
+    a2.innerHTML = "I asked God to bring me my other half and manifested you";
     document.body.children[4].appendChild(a2);
     a2.addEventListener("click", function () {
         wrongcw();
@@ -114,7 +114,7 @@ function question1() {
     });
 
     a3 = document.createElement("BUTTON");
-    a3.innerHTML = "Buffalo Wild Wings";
+    a3.innerHTML = "Kash's live";
     document.body.children[4].appendChild(a3);
     a3.addEventListener("click", function () {
         wrongcw();
@@ -123,7 +123,7 @@ function question1() {
     });
 
     a4 = document.createElement("BUTTON");
-    a4.innerHTML = "Wing Thursday";
+    a4.innerHTML = "All the above";
     document.body.children[4].appendChild(a4);
     a4.addEventListener("click", function () {
         correctcw();
@@ -142,7 +142,7 @@ function question2() {
     question.textContent = "What's my favorite thing about you?";
        
     a1 = document.createElement("BUTTON");
-    a1.innerHTML = "You're beautiful as fook";
+    a1.innerHTML = "Your ethereal beauty";
     document.body.children[4].appendChild(a1);
     a1.addEventListener("click", function () {
         wrongcw();
@@ -160,7 +160,7 @@ function question2() {
     });
 
     a3 = document.createElement("BUTTON");
-    a3.innerHTML = "You always want whats best for me";
+    a3.innerHTML = "You make me laugh and you're so unserious";
     document.body.children[4].appendChild(a3);
     a3.addEventListener("click", function () {
         wrongcw();
@@ -184,10 +184,10 @@ function question3() {
     a2.remove();
     a3.remove();
     a4.remove();
-    question.textContent = "How did I ask you to be my gf?";
+    question.textContent = "How many kids are we gonna have";
        
     a1 = document.createElement("BUTTON");
-    a1.innerHTML = "*caresses face* You are the most beautiful divine creation from the universe and I wish to partake in adult things and an everlasting loving relationship with you.";
+    a1.innerHTML = "none";
     document.body.children[4].appendChild(a1);
     a1.addEventListener("click", function () {
         wrongcw();
@@ -196,7 +196,7 @@ function question3() {
     });
  
     a2 = document.createElement("BUTTON");
-    a2.innerHTML = "*makes out with you* uh will you b my gf c:";
+    a2.innerHTML = "3";
     document.body.children[4].appendChild(a2);
     a2.addEventListener("click", function () {
         correctcw();
@@ -205,7 +205,7 @@ function question3() {
     });
 
     a3 = document.createElement("BUTTON");
-    a3.innerHTML = "Date me or I will cry";
+    a3.innerHTML = "2";
     document.body.children[4].appendChild(a3);
     a3.addEventListener("click", function () {
         wrongcw();
@@ -214,7 +214,7 @@ function question3() {
     });
 
     a4 = document.createElement("BUTTON");
-    a4.innerHTML = "*never actually asks you out n we proceed to date without a title*";
+    a4.innerHTML = "1";
     document.body.children[4].appendChild(a4);
     a4.addEventListener("click", function () {
         wrongcw();
@@ -241,7 +241,7 @@ function question4() {
     });
  
     a2 = document.createElement("BUTTON");
-    a2.innerHTML = "lol youre leavin my ass";
+    a2.innerHTML = "you're about to break up w me";
     document.body.children[4].appendChild(a2);
     a2.addEventListener("click", function () {
         wrongcw();
@@ -304,7 +304,7 @@ function question5() {
     });
 
     a4 = document.createElement("BUTTON");
-    a4.innerHTML = "yeth c:";
+    a4.innerHTML = "yes :)";
     document.body.children[4].appendChild(a4);
     a4.addEventListener("click", function () {
         correctcw();
@@ -322,13 +322,43 @@ function postquiz() {
     a3.remove();
     a4.remove();
     highscore.style.visibility = "visible";
-    question.textContent = "Quiz Complete! Your score is " + score + ". Please enter your name below, and follow the link in the corner!" 
-    a.appendChild(link);  
-    a.title = "Link";  
-      
-    // Set the href property. 
-  
-    
+    question.textContent = "Quiz Complete! Your score is " + score + ". Haz you mean the world to me. Thank you for being the first person I speak to in the morning and the last person I speak to before bed. You are my dream girl. I can't wait to see what is in store for us. I can't wait until you're all mine. Thank you pretty baby for dealing with me. Te quiero mucho mi hermosa princesa. I adore you.";
+// Create the link to a note
+var noteLink = document.createElement('a');
+noteLink.href = "";  // Replace with your desired note link
+noteLink.target = "_blank";  // Open the link in a new tab
+noteLink.textContent = " here's something I wrote you";  // The text for the link
+
+// Add some styling to make it stand out, if desired
+noteLink.style.color = "red";  // Blue color for the link
+noteLink.style.fontSize = "1.2rem";  // Adjust font size
+
+// Append the link to the question element
+question.appendChild(noteLink);
+question.appendChild(document.createElement('br'));  // Optional: add a line break after the link
+
+// Add the submit button
+a1 = document.createElement("BUTTON");
+    // Check if the Spotify embed already exists
+    if (!document.querySelector("#spotify-embed")) {
+        // Create the iframe element for the Spotify playlist
+        var spotifyEmbed = document.createElement('iframe');
+        spotifyEmbed.src = "https://open.spotify.com/embed/playlist/7IjKUUFdLkVovmtBclOtbB?utm_source=generator";  // Your playlist link
+        spotifyEmbed.width = "100%";
+        spotifyEmbed.height = "352";
+        spotifyEmbed.style.borderRadius = "12px";
+        spotifyEmbed.frameBorder = "0";
+        spotifyEmbed.allowfullscreen = "";
+        spotifyEmbed.allow = "autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture";
+        spotifyEmbed.loading = "lazy";
+        spotifyEmbed.id = "spotify-embed";  // Set an ID to identify the embed
+
+        // Append the Spotify iframe to the body
+        document.body.children[4].appendChild(spotifyEmbed);
+        document.body.children[4].appendChild(document.createElement('br'));  // Add a line break
+    }
+
+    // Add the submit button
     a1 = document.createElement("BUTTON");
     a1.innerHTML = "Submit";
     document.body.children[4].appendChild(a1);
@@ -337,19 +367,16 @@ function postquiz() {
         localStorage.setItem("score", score);
         scorepage();
     });
+
     var img = new Image(); 
     var div = document.getElementById('x'); 
- 
- 
     img.onload = function() { 
- 
         div.innerHTML += '<img src="'+img.src+'" />';  
- 
-}; 
- 
- 
+    }; 
     img.src = 'assets/frame.png'; 
 }
+
+
 
 // High score page
 function scorepage() {
