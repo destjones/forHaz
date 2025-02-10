@@ -325,7 +325,7 @@ function postquiz() {
     question.textContent = "Quiz Complete! Your score is " + score + ". Haz you mean the world to me. Thank you for being the first person I speak to in the morning and the last person I speak to before bed. You are my dream girl. I can't wait to see what is in store for us. I can't wait until you're all mine. Thank you pretty baby for dealing with me. Te quiero mucho mi hermosa princesa. I adore you.";
 // Create the link to a note
 var noteLink = document.createElement('a');
-noteLink.href = "";  // Replace with your desired note link
+noteLink.href = "https://www.icloud.com/notes/0d1goTp-Pf2v8P7iKtXHfAM2Q#Hasna,_my_Sun";  // Replace with your desired note link
 noteLink.target = "_blank";  // Open the link in a new tab
 noteLink.textContent = " here's something I wrote you";  // The text for the link
 
